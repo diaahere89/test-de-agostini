@@ -78,7 +78,7 @@ A complete user management system with:
 - First, register a regular user.
 - Then make the user an admin via command line: `./vendor/bin/sail artisan user:make-admin user@example.com`.
 
-2. Blade Template Structure:
+3. Blade Template Structure:
 resources/views/
 ├── layouts/
 │   ├── app.blade.php      # Main layout (uses @yield('content'))
@@ -92,3 +92,10 @@ resources/views/
     ├── index.blade.php
     ├── show.blade.php
     └── edit.blade.php
+
+4. Seeding the Database:
+- To populate the database with sample users and data, run:
+```bash
+    ./vendor/bin/sail artisan db:seed
+```
+- You can customize the seeders in `database/seeders/` as needed.
